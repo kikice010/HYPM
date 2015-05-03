@@ -52,7 +52,7 @@
             <use xlink:href="#d2b8d32972cd443781e01d3f5bf1be0d" xmlns:xlink="http://www.w3.org/1999/xlink" p:name="outArrow1" id="41c6503155404461a2096da987dc2426" style="stroke: rgb(102, 102, 102); stroke-opacity: 1; stroke-width: 2;"/>
             <text p:name="text" id="d54607eb25844ea5a6d8fddf199a5a0a" style="fill: rgb(0, 0, 0); fill-opacity: 1; font-family: Helvetica; font-size: 12px; font-weight: normal; font-style: normal; text-decoration: none;">
                 <textPath xlink:href="#d2b8d32972cd443781e01d3f5bf1be0d" xmlns:xlink="http://www.w3.org/1999/xlink" startOffset="50%" text-anchor="middle" alignment-baseline="middle">
-                    <tspan dy="-4" p:name="textSpan" id="927b05003e1e41e992447fb83c18a77b" dx="-16"></tspan>
+                    <tspan dy="-4" p:name="textSpan" id="927b05003e1e41e992447fb83c18a77b" dx="-16"/>
                 </textPath>
             </text>
 
@@ -166,4 +166,18 @@
     </g>
   </g>
 </g></g>
+        </g><g xmlns="http://www.w3.org/2000/svg" p:type="Shape" xmlns:p="http://www.evolus.vn/Namespace/Pencil" p:def="Evolus.Common:Bitmap" id="d40ecd575faf49a1b70590b30e58b58a" transform="matrix(1,0,0,1,161,286)"><p:metadata><p:property name="box"><![CDATA[31,38]]></p:property><p:property name="imageData"><![CDATA[31,38,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAmCAYAAAA820BcAAABMklEQVRYhe3WIbKFIBQGYKLRJRCNLIFINBKJ7oLoMliGkSUYiUYikfi/8Abn3rkqwvWVN5wZijOe7xcQJciUUgqEkOLBOc+1BrmDG2OyjV7LWtvwhje84Q1veMMb3vD/invvYa09HUKIKpwxdtnXOQcSY4QQYv/dPRrLshTh67qe9uq6DpRSbNv2O+0pgJQSMcYiqKS01mCMwXsP4GXNUwAhxJ8ESHAIYb/2tuFijFBKPR5gmqYP+ANP9WQApRQ45x/wKZ5uOkpbCl89xOV7XhsgxggpZXb2sofM0UbJwUIIjOOYXbYsngIMw4Bt227BSqlbQW/hKUA6HJ6Ai3AAmOf5MEAIAYyxIrgYBwBjDCilcM69wVrr0lbleArQ9/3+AamBq/EUgBBSDX+FA9invrZ+AJMbCDbetk1QAAAAAElFTkSuQmCC]]></p:property><p:property name="withBlur"><![CDATA[false]]></p:property><p:property name="fillColor"><![CDATA[#FFFFFF00]]></p:property><p:property name="strokeColor"><![CDATA[#000000FF]]></p:property><p:property name="strokeStyle"><![CDATA[0|]]></p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="011e180e6bf445638c9dcf9c8a8da9e4">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="2bb41186a9f9456dbee67d6d8661ac96">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="35ae94ec17bf403292d850d15b935e4f" width="31" height="38" transform="translate(0,0)"/>
+                    <g p:name="imageContainer" id="b6d6a5958af6468fadfb06efd30c2d16" transform="scale(1,1)">
+                        <image x="0" y="0" p:name="image" id="f36d85d886824443b147cce0bc71aecb" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAmCAYAAAA820BcAAABMklEQVRYhe3WIbKFIBQGYKLRJRCNLIFINBKJ7oLoMliGkSUYiUYikfi/8Abn3rkqwvWVN5wZijOe7xcQJciUUgqEkOLBOc+1BrmDG2OyjV7LWtvwhje84Q1veMMb3vD/invvYa09HUKIKpwxdtnXOQcSY4QQYv/dPRrLshTh67qe9uq6DpRSbNv2O+0pgJQSMcYiqKS01mCMwXsP4GXNUwAhxJ8ESHAIYb/2tuFijFBKPR5gmqYP+ANP9WQApRQ45x/wKZ5uOkpbCl89xOV7XhsgxggpZXb2sofM0UbJwUIIjOOYXbYsngIMw4Bt227BSqlbQW/hKUA6HJ6Ai3AAmOf5MEAIAYyxIrgYBwBjDCilcM69wVrr0lbleArQ9/3+AamBq/EUgBBSDX+FA9invrZ+AJMbCDbetk1QAAAAAElFTkSuQmCC" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="38"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#2bb41186a9f9456dbee67d6d8661ac96" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(1, 1)" p:filter="url(#011e180e6bf445638c9dcf9c8a8da9e4)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="995cbb842313479b8916b39ae04725bd"/>
+            <use xlink:href="#2bb41186a9f9456dbee67d6d8661ac96" xmlns:xlink="http://www.w3.org/1999/xlink"/>
         </g></Content></Page></Pages></Document>
