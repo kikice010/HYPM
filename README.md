@@ -6,8 +6,8 @@
 #####C-IDM:
 + ~~instructor has only one relation to course, not two. it is a mistake.~~
 + also from course to instructor there is only one relation.
-+ more landmarks: instructors, equipment
-+ course category has also grouping All course categories
++ ~~more landmarks: instructors, equipment~~
++ ~~course category has also grouping All course categories~~
 
 #####P-IDM:
 + separate pages for: 
