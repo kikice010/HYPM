@@ -24,4 +24,4 @@
 
 #####MOCKUP:
 + ~~Add links to category description pages~~
-+ Add pages to descripe separate categories
++ ~~Add pages to describe separate categories~~
