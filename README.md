@@ -21,3 +21,7 @@
 + category, level and alphabetical ordering of courses are separate pages in p idm.
 + on a specific course page there must be shown from where we came (category yoga, level basic). and next to the name of course we should place its level.
 + each room is a single page in our schema
+
+#####MOCKUP:
++ ~~Add links to category description pages~~
++ Add pages to descripe separate categories
