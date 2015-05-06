@@ -25,6 +25,7 @@
 #####MOCKUP:
 + ~~Add links to category description pages~~
 + ~~Add pages to describe separate categories~~
-+ premjesti "see staff" inkove iz Courses u Category
-+ promijeni mockup tako da Instructors sadrzi samo listu instructora
-+ dodaj single Instructor page
++ ~~premjesti "see staff" inkove iz Courses u Category~~
++ ~~promijeni mockup tako da Instructors sadrzi samo listu instructora~~
++ ~~dodaj single Instructor page~~
++ ~~dodaj request more info popup~~
