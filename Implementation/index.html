@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link href="resources/css/external/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/main.css" rel="stylesheet">
-
+    <link href="resources/css/index.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,60 +20,58 @@
 </head>
 
 <body>
-    <<!-- Fixed navbar -->
+    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Big Gym</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Big Gym</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="./pages/equipment.html">Equipment</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Fees and registration</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#staff">Staff</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="./pages/equipment.html">Equipment</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Fees and registration</a></li>
-            <li><a href="#">Location</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
-
-    <!-- Begin page content -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Big Gym</h1>
-        <h2>Be more. Do more.</h2>
-
-      </div>
+    <!-- Begin page wrapper -->
+    <div class="page-wrap">
+        <!-- Begin jumbotron -->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Big Gym</h1>
+                <h2>Be more. Do more.</h2>
+            </div>
+        </div>
+        <!-- Begin page content -->
+        <div class="container">
+            <div class="page-header">
+                <h1>Sticky footer with fixed navbar</h1>
+            </div>
+            <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+            <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+        </div>
     </div>
-    <div class="container">
-
-      <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
-      </div>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
-    </div>
-
+    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Big Gym 2015</p>
-      </div>
+        <div class="container">
+            <p class="text-muted">Big Gym 2015</p>
+        </div>
     </footer>
-
-
-
     <script src="resources/js/external/bootstrap.min.js"></script>
-
 </body>
 
 </html>
