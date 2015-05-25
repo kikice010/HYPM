@@ -1,30 +1,24 @@
 $(document).ready(function() {
 
-    var $container = $('#equipment-container');
-    $.ajax({
-        url: 'http://hypermediagym.altervista.org/php/get_all_equipment.php',
-        method: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            console.log(data);
-            if (data.hasOwnProperty('equipment')) {
-                for (var i in data.equipment) {
-                    $container.append(
-                        createEquipmentElement(data.equipment[i].name, data.equipment[i].description, data.equipment[i].image_path));
-                }
-            }
-        }
-    });
+    var dummyNode = $('.single-equipment-item'); // get the empty boilerplate node defined in the html
+    var eqNode    = dummyNode.clone();           // clone it
+    dummyNode.css('display','none');             // hide the useless boilerplate node
 
-    function createEquipmentElement(name, description, image_path) {
-        return (
-            $('<div>').attr('class', 'single-equipment-item')
-            .append($('<h2>').text(name))
-            .append($('<div>').text(description))
-            .append($('<img>').attr({
-                src: "../resources/images/equipment/" + image_path,
-                height: "auto"
-            })));
+
+    function createEquipmentElement(equipment) { // clone the empty boilerplate node and fill it with content
+        var tempNode = eqNode.clone();
+            tempNode.find('.equipment-name').html(equipment.name);
+            tempNode.find('.equipment-description').html(equipment.description);
+            tempNode.find('img').attr('src', '../resources/images/equipment/' + equipment.image_path);
+        return tempNode;
+    }
+
+    // load content from the server
+    // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
+    if (typeof loadContent !== 'undefined') {   
+        loadContent( 
+            'http://hypermediagym.altervista.org/php/get_all_equipment.php',
+             'equipment', $('#equipment-container'), createEquipmentElement);
     }
 
 });
