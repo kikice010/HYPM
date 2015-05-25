@@ -83,3 +83,29 @@ CREATE TABLE `testimonial` (
    `link` tinytext NOT NULL,
   PRIMARY KEY (`testimonial_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `location` (
+  `location_id` int NOT NULL AUTO_INCREMENT,
+  `address` tinytext NOT NULL,
+   `how_to_get_here` tinytext NOT NULL,
+   `lat` float NOT NULL,
+   `long` float NOT NULL,
+  PRIMARY KEY (`location_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `membership` (
+  `membership_id` int NOT NULL AUTO_INCREMENT,
+  `option` tinytext NOT NULL,
+  PRIMARY KEY (`membership_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `schedule` (
+  `schedule_id` int NOT NULL AUTO_INCREMENT,
+  `day` varchar(30) NOT NULL,
+  `start_time` datetime NOT NULL,
+  `end_time` datetime NOT NULL, 
+  `repeat` varchar(60) NOT NULL,
+  `schedule_course_id` int NOT NULL,
+  PRIMARY KEY (`schedule_id`),
+  CONSTRAINT `schedule_course_id` FOREIGN KEY (`schedule_course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
