@@ -8,9 +8,7 @@ $(document).ready(function() {
         success: function(data) {
             console.log(data);
             if (data.hasOwnProperty('equipment')) {
-
                 for (var i in data.equipment) {
-
                     $container.append(
                         createEquipmentElement(data.equipment[i].name, data.equipment[i].description, data.equipment[i].image_path));
                 }

@@ -45,6 +45,7 @@ CREATE TABLE `instructor` (
   `bio` text NOT NULL,
   `qualifications` text NOT NULL,
   `prizes_and_awards` text NOT NULL,
+  `image_path` text NOT NULL,
   `instructor_of_the_month` int(1) NOT NULL,
   PRIMARY KEY (`instructor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
