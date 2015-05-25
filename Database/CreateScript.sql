@@ -1,10 +1,10 @@
 CREATE TABLE `category` (
   `category_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
-  `description` tinytext NOT NULL,
-  `origins`  tinytext NOT NULL,
-  `benefits`  tinytext NOT NULL,
-  `meant_for`  tinytext NOT NULL,
+  `description` text NOT NULL,
+  `origins`  text NOT NULL,
+  `benefits`  text NOT NULL,
+  `meant_for`  text NOT NULL,
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
@@ -12,7 +12,7 @@ CREATE TABLE `category` (
 CREATE TABLE `room` (
   `room_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
-  `location` tinytext NOT NULL,
+  `location` text NOT NULL,
   PRIMARY KEY (`room_id`),
   UNIQUE KEY `room_name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
@@ -20,9 +20,9 @@ CREATE TABLE `room` (
 CREATE TABLE `course` (
   `course_id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(40) NOT NULL,
-  `description` tinytext NOT NULL,
-  `target`  tinytext NOT NULL,
-  `schedule`  tinytext NOT NULL,
+  `description` text NOT NULL,
+  `target`  text NOT NULL,
+  `schedule`  text NOT NULL,
   `level`  varchar(40) NOT NULL,
   `course_category_id`  int NOT NULL,
   `course_room_id`  int NOT NULL,
@@ -35,17 +35,17 @@ CREATE TABLE `course` (
 CREATE TABLE `room_gallery` (
   `room_gallery_id` int NOT NULL AUTO_INCREMENT,
   `fk_room_id` int NOT NULL,
-  `image_path` tinytext NOT NULL,
+  `image_path` text NOT NULL,
   PRIMARY KEY (`room_gallery_id`),
   CONSTRAINT `fk_room_id` FOREIGN KEY (`fk_room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `instructor` (
   `instructor_id` int(11) NOT NULL AUTO_INCREMENT,
-  `bio` tinytext NOT NULL,
-  `qualifications` tinytext NOT NULL,
-  `prizes_and_awards` tinytext NOT NULL,
-  `instructor_of_the_month` tinyint(1) NOT NULL,
+  `bio` text NOT NULL,
+  `qualifications` text NOT NULL,
+  `prizes_and_awards` text NOT NULL,
+  `instructor_of_the_month` int(1) NOT NULL,
   PRIMARY KEY (`instructor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -71,23 +71,23 @@ CREATE TABLE `category_instructor` (
 CREATE TABLE `equipment` (
   `equipment_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
-   `description` tinytext NOT NULL,
-   `image_path` tinytext NOT NULL,
+   `description` text NOT NULL,
+   `image_path` text NOT NULL,
   PRIMARY KEY (`equipment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `testimonial` (
   `testimonial_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(40) ,
-   `description` tinytext NOT NULL,
-   `link` tinytext NOT NULL,
+   `description` text NOT NULL,
+   `link` text NOT NULL,
   PRIMARY KEY (`testimonial_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `location` (
   `location_id` int NOT NULL AUTO_INCREMENT,
-  `address` tinytext NOT NULL,
-   `how_to_get_here` tinytext NOT NULL,
+  `address` text NOT NULL,
+   `how_to_get_here` text NOT NULL,
    `lat` float NOT NULL,
    `long` float NOT NULL,
   PRIMARY KEY (`location_id`)
@@ -95,7 +95,7 @@ CREATE TABLE `location` (
 
 CREATE TABLE `membership` (
   `membership_id` int NOT NULL AUTO_INCREMENT,
-  `option` tinytext NOT NULL,
+  `option` text NOT NULL,
   PRIMARY KEY (`membership_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
