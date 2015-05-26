@@ -35,6 +35,52 @@ if (isset($_GET["name"])) {
             $entry["prizes_and_awards"] = $row["prizes_and_awards"];
             $entry["instructor_of_the_month"] = $row["instructor_of_the_month"];
             $entry["image_path"] = $row["image_path"];
+			$entry["courses"] = array();
+			$entry["categories"] = array();
+
+			$courses_result = mysqli_query($con,
+				"SELECT title, course_category_id FROM course " .
+				"INNER JOIN course_instructor " .
+				"ON course_id = fk_course_id " .
+				"WHERE fk_instructor_id = " . $row['instructor_id']) or die(mysql_error());
+
+			if (mysqli_num_rows($courses_result) > 0) {
+				$response["success"] = 1;
+				$response["message"] = "Courses and instructors found!";
+				
+				$duplicatesContainingArray = array();
+				while ($course_row = mysqli_fetch_array($courses_result)) {
+					//get title of the course
+					array_push($entry["courses"], $course_row["title"]);
+					
+					//join $course_row["course_category_id"] with category.category_id and take category.name
+					$categories_result = mysqli_query($con,
+						"SELECT name FROM category " .
+						"WHERE category_id = " . $course_row["course_category_id"]) or die(mysql_error());
+						
+					if (mysqli_num_rows($categories_result) > 0) {
+						$response["success"] = 1;
+						$response["message"] = "Categories, courses and instructors found!";
+						
+						while ($category_row = mysqli_fetch_array($categories_result)) {
+							//get name of the category
+							array_push($duplicatesContainingArray, $category_row["name"]);
+						}
+					} else {
+							$response["success"] = 0;
+							$response["message"] = "Categories not found!";
+					}
+				}
+				$duplicatesRemovedArray = array_unique($duplicatesContainingArray);
+				foreach ($duplicatesRemovedArray as &$categoryName) {
+					array_push($entry["categories"], $categoryName);
+				}
+				
+			} else {
+				$response["success"] = 0;
+				$response["message"] = "Courses not found!";
+			}
+			//u course imam course_category_id koji treba da se joinuje sa category_id iz category i da se uzme name
 
             // push single entry into final response array
             array_push($response["instructor"], $entry);
