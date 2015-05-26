@@ -41,7 +41,6 @@ $(document).ready(function() {
     // load content from the server
     // loadContent( url,  rootJsonElement, $containerNode,  function that creates a node to be appended to the $container )
     var params = (window.location.search.replace("?", "")).split("=");
-    console.log(params);
     if (typeof loadContent !== 'undefined' && params.length === 2) {
         loadContent(
             'http://hypermediagym.altervista.org/php/get_course_by_title.php',
