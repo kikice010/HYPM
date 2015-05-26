@@ -44,9 +44,8 @@ $(document).ready(function() {
     if (typeof loadContent !== 'undefined' && params.length === 2) {
         loadContent(
             'http://hypermediagym.altervista.org/php/get_course_by_title.php',
-            'course', $('#course-container'), createCourseContainer, {
-                'title': params[1].replace(/%20/g, ' ')
-            });
+            'course', $('#course-container'), createCourseContainer, 
+            {'title': params[1].replace(/%20/g, ' ') });
     }
 
 });
