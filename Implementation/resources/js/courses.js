@@ -31,7 +31,7 @@ $(document).ready(function() {
     if (typeof loadContent !== 'undefined') {
         loadContent(
             'http://hypermediagym.altervista.org/php/get_courses_by_category.php',
-            'category', $('#course-container'), createCategoryContainer);
+            'category', $('#category-filter-container'), createCategoryContainer);
     }
 
 });

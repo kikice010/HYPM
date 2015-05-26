@@ -33,7 +33,7 @@
                 <span class="navbar-brand" href="#">Big Gym</span>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-               <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
                     <li><a href="../index.html">Home</a></li>
                     <li class="active"><a href="./courses.html">Courses</a></li>
                     <li><a href="./staff.html">Staff</a></li>
@@ -48,16 +48,23 @@
         </div>
     </nav>
     <!-- End navbar -->
-
     <!-- Begin page wrap -->
     <div class="page-wrap">
         <div class="container">
-            <div class="page-header">
+            <div class="page-header" style="border-bottom:none">
                 <h1>Our courses</h1>
             </div>
-            <div id="course-container" class="row">
+            <div class="course-tab-wrap">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" data-filter="category" class="active"><a href="#">Categories</a></li>
+                    <li role="presentation" data-filter="level"><a href="#">Level</a></li>
+                    <li role="presentation" data-filter="alphabetical"><a href="#">Alphabetical Order</a></li>
+                </ul>
+            </div>
+
+            <div id="category-filter-container" class="row">
                 <!-- load from database -->
-                <div class="single-category-container col-md-3 col-sm-4 col-xs-12">
+                <div class="single-category-container col-md-3 col-sm-4 col-xs-12" style="display:none;">
                     <div>
                         <a href="" class="category-name-link" style="text-decoration: none; ">
                             <span class="glyphicon glyphicon-info-sign gray" aria-hidden="true"></span>
@@ -68,10 +75,11 @@
                     </div>
                 </div>
             </div>
+             <div id="level-filter-container" class="row"></div>
+             <div id="alphabetical-filter-container" class="row"></div>
         </div>
     </div>
     <!-- End page wrap -->
-
     <!-- Begin footer -->
     <footer class="footer">
         <div class="container">
@@ -79,8 +87,7 @@
         </div>
     </footer>
     <!-- End footer -->
-
     <script src="../resources/js/external/bootstrap.min.js"></script>
     <script src="../resources/js/loadContentFunction.js"></script>
-    <script src="../resources/js/courses.js"></script>
+    <script src="../resources/js/coursesFilterModule.js"></script>
 </body </html>
