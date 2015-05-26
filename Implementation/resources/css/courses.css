@@ -13,7 +13,9 @@
     color: #ccc;
     cursor: pointer;
 }
-
+.category-name, .level-name, .alphabetical-name {
+    padding-left: 2%
+}
 .category-name {
     color: #000;
     cursor: pointer;

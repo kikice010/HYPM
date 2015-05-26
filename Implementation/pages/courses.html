@@ -56,14 +56,14 @@
             </div>
             <div class="course-tab-wrap">
                 <ul class="nav nav-tabs">
-                    <li role="presentation" data-filter="category" class="active"><a href="#">Categories</a></li>
-                    <li role="presentation" data-filter="level"><a href="#">Level</a></li>
-                    <li role="presentation" data-filter="alphabetical"><a href="#">Alphabetical Order</a></li>
+                    <li role="presentation" id="category-tab"><a href="#">Categories</a></li>
+                    <li role="presentation" id="level-tab"><a href="#">Level</a></li>
+                    <li role="presentation" id="alphabetical-tab"><a href="#">Alphabetical Order</a></li>
                 </ul>
             </div>
 
             <!-- Begin category container -->
-            <div id="category-filter-container" class="row">
+            <div id="category-filter-container" class="row" style="display:none;">
                 <div class="single-category-container col-md-3 col-sm-4 col-xs-12" style="display:none;">
                     <div>
                         <a href="" class="category-name-link" style="text-decoration: none; ">
@@ -77,7 +77,7 @@
             <!-- End category container -->
 
             <!-- Begin level container -->
-             <div id="level-filter-container" class="row" >
+             <div id="level-filter-container" class="row" style="display:none;">
                 <div class="single-level-container col-md-3 col-sm-5 col-xs-12" style="display:none;" >
                     <div>
                         <div class="level-name"></div>
@@ -88,7 +88,7 @@
             <!-- End level container -->
 
             <!-- Begin alphabetical container -->
-             <div id="alphabetical-filter-container" class="row"  >
+             <div id="alphabetical-filter-container" class="row"  style="display:none;">
                  <div class="single-alphabetical-container col-md-4 col-sm-5 col-xs-12" style="display:none;">
                     <div>
                         <div class="alphabetical-name"></div>
@@ -109,6 +109,5 @@
     </footer>
     <!-- End footer -->
     <script src="../resources/js/external/bootstrap.min.js"></script>
-    <script src="../resources/js/loadContentFunction.js"></script>
     <script src="../resources/js/coursesFilterModule.js"></script>
 </body </html>

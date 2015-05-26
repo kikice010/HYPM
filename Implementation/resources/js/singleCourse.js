@@ -11,8 +11,7 @@ $(document).ready(function() {
             .html(course.room)
             .attr('href', './room.html?name=' + course.room);
         rootElement.find('.course-level a')
-            .html(course.level)
-            .attr('href', './courses.html?orderBy=' + course.level);
+            .html(course.level);
 
         rootElement.find('.course-category a')
             .html(course.category)
