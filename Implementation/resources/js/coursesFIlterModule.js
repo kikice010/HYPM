@@ -68,9 +68,8 @@ $( function(){
 	};	
 
 	var categoryData 	= {
-		$root 			: 	$('#category-filter-container')   || null,
-		$itemElement 	: 	$('.single-category-container').clone()   || null,
-		
+		$root 			: 	$('#category-filter-container')   			|| null,
+		$itemElement 	: 	$('.single-category-container').clone()   	|| null,
 		loadData : function(){
 			if (typeof loadContent !== 'undefined') 
 		        Util.loadContent(
@@ -86,10 +85,9 @@ $( function(){
 
 	};
 
-	var levelData 	= {
-		$root 			: 	$('#level-filter-container')   || null,
-		$itemElement 	: 	$('.single-level-container').clone()   || null,
-		
+	var levelData = {
+		$root 			: 	$('#level-filter-container')  			 || null,
+		$itemElement 	: 	$('.single-level-container').clone() 	 || null,
 		loadData : function(){
 			if (typeof loadContent !== 'undefined') 
 		        Util.loadContent(
@@ -105,9 +103,28 @@ $( function(){
 
 	};
 
+	var alphabeticalData = {
+		$root 			: 	$('#alphabetical-filter-container')   			|| null,
+		$itemElement 	: 	$('.single-alphabetical-container').clone()   	|| null,
+		loadData : function(){
+			if (typeof loadContent !== 'undefined') 
+		        Util.loadContent(
+		        	'http://hypermediagym.altervista.org/php/get_courses_by_alphabetical.php',
+		            'alphabetical', this.$root, this.$itemElement);
+		},
+		show : 	function(){
+			this.$root.fadeIn();
+		},
+		hide : 	function(){
+			this.$root.fadeOut();
+		}
+
+	};
+
 
 	categoryData.loadData();
 	levelData.loadData();
+	alphabeticalData.loadData();
 	//return {
 	// 	filterByCategory: filterByCategory,
 	// 	filterByLevel: filterByLevel,
