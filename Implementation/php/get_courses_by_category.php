@@ -1,8 +1,19 @@
 <?php
 
 /*
- * Following code will list all the equipment
- */
+ Following code lists all categories and their corresonding courses
+ eg. return JSON format;
+    {'category':[
+        {   
+            'name': 'Yoga',
+            'courses': ['Bikram Yoga', 'Antigravity Yoga']
+        },{
+            'name': 'Pilates',
+            'courses': ['Stott Pilates', 'Private pilates', 'Mat pilates']
+        }
+    ]}
+*/
+
 header("Access-Control-Allow-Origin: *");
 // array for JSON response
 $response = array();
@@ -13,13 +24,12 @@ mysqli_query( $con,"SET character_set_results = 'utf8', character_set_client = '
 
 // get all equipment from equipment table
 $result = mysqli_query($con,"SELECT name, category_id FROM category")or die(mysql_error());
-// check for empty result
-if (mysqli_num_rows($result) > 0){
-    // looping through all results
-    // equipment node
+
+
+if (mysqli_num_rows($result) > 0){ // check for empty result
+
 	$response["category"] = array();
     while ($row = mysqli_fetch_array($result)){
-        // temp entry array
         $entry = array();
         $entry["name"] = $row["name"];
         $entry["courses"] = array();

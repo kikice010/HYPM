@@ -9,6 +9,7 @@ $(document).ready(function() {
     function createCategoryContainer(category) { // clone the empty boilerplate node and fill it with content
         var tempNode = newNode.clone();
         tempNode.find('.category-name').html(category.name);
+        tempNode.find('.category-name-link').attr('href','./category.html?name='+category.name);
 
         if (category.hasOwnProperty('courses')) {
             for (var i in category.courses) {
