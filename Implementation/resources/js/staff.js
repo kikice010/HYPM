@@ -7,13 +7,10 @@ $(document).ready(function() {
 
     function createInstructorElement(instructor) { // clone the empty boilerplate node and fill it with content
         var tempNode = eqNode.clone();
-            tempNode.find('.instructor-name').html(instructor.instr_name);
-            tempNode.find('.instructor-description').html(instructor.bio);
+            tempNode.find('.instructor-name').html("<a href='./instructor.html?name="+instructor.instr_name+"'>"+instructor.instr_name+"</a>");
             tempNode.find('img').attr('src', instructor.image_path);
-            tempNode.find('.instructor-qualifications').html("<b>Qualifications: </b>"+instructor.qualifications);
-            tempNode.find('.instructor-prizes_and_awards').html("<b>Prizes and awards: </b>"+instructor.prizes_and_awards);
 			if(instructor.instructor_of_the_month == 1) {
-				tempNode.find('.instructor-of_the_month').html("<img src='http://hypermediagym.altervista.org/resources/images/instructors/star.png'  height='42' width='42' /> <b> Instructor of the month</b>");
+				tempNode.find('.instructor-of_the_month').html("<img src='../resources/images/instructors/star.png'  height='42' width='42' /> <b> Instructor of the month</b>");
 			} else {
 				tempNode.find('.instructor-of_the_month').css("visibility", 'hidden');
 			}
