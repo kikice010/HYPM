@@ -1,3 +1,25 @@
+/*
+	function Util.createElement expects JSON filteredObject
+	where root element filter can be either 'category', 'level' or 'alphabetical'
+e.g. 
+{
+    filter: [
+    	{
+            name: "Cardio",
+            courses: [
+                "Spinning",
+                "Running Club"
+            ]
+        }, {
+            name: "Dance",
+            courses: [
+                "Ballet workout"
+            ]
+        }
+    ]
+}
+*/
+
 $( function(){
 	var CoursesFilterModule = (function(){
 
@@ -19,10 +41,10 @@ $( function(){
 
 	        if (filteredObj.hasOwnProperty('courses')) {
 	            for (var i in filteredObj.courses) {
-	                tempNode.find('.category-courses')
+	                tempNode.find('.'+ filter +'-courses')
 	                    	.append(Util.createListItem(filteredObj.courses[i]));
 	        }}
-	        return tempNode;
+	        return tempNode.fadeIn();
 		},
 		loadContent		: 	function (phpUrl, rootJSON, $container, $itemBoilerplate) {
 			var self = this;
@@ -32,10 +54,13 @@ $( function(){
 		        dataType: 'json',
 		        success: function(data) {
 		            if (data.hasOwnProperty(rootJSON)) {
-		                for (var i in data[rootJSON]) {
-		                    $container.append(
-		                    	self.createElement(rootJSON, data[rootJSON][i], $itemBoilerplate));
-		                }
+		            	var counter = 0;
+						var intervalId = setInterval(function(){
+						    $container.append( 
+						    		   self.createElement(rootJSON, data[rootJSON][counter], $itemBoilerplate));
+						    counter++;
+						    if(counter === (data[rootJSON]).length)  clearInterval( intervalId );
+						}, 10);
 		            }
 		        }
     		});
@@ -44,7 +69,7 @@ $( function(){
 
 	var categoryData 	= {
 		$root 			: 	$('#category-filter-container')   || null,
-		$itemElement 	: 	$('.single-category-container').clone().css('display','')   || null,
+		$itemElement 	: 	$('.single-category-container').clone()   || null,
 		
 		loadData : function(){
 			if (typeof loadContent !== 'undefined') 
@@ -61,7 +86,28 @@ $( function(){
 
 	};
 
+	var levelData 	= {
+		$root 			: 	$('#level-filter-container')   || null,
+		$itemElement 	: 	$('.single-level-container').clone()   || null,
+		
+		loadData : function(){
+			if (typeof loadContent !== 'undefined') 
+		        Util.loadContent(
+		        	'http://hypermediagym.altervista.org/php/get_courses_by_level.php',
+		            'level', this.$root, this.$itemElement);
+		},
+		show : 	function(){
+			this.$root.fadeIn();
+		},
+		hide : 	function(){
+			this.$root.fadeOut();
+		}
+
+	};
+
+
 	categoryData.loadData();
+	levelData.loadData();
 	//return {
 	// 	filterByCategory: filterByCategory,
 	// 	filterByLevel: filterByLevel,
