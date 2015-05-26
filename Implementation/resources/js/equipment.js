@@ -9,7 +9,7 @@ $(document).ready(function() {
         var tempNode = eqNode.clone();
             tempNode.find('.equipment-name').html(equipment.name);
             tempNode.find('.equipment-description').html(equipment.description);
-            tempNode.find('img').attr('src', '../resources/images/equipment/' + equipment.image_path);
+            tempNode.find('img').attr('src', equipment.image_path);
         return tempNode;
     }
 
