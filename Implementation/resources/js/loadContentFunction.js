@@ -1,7 +1,8 @@
-function loadContent(phpUrl, rootJSON, $container, function_createContentElement) {
+function loadContent(phpUrl, rootJSON, $container, function_createContentElement, getParams) {
     $.ajax({
         url: phpUrl,
         method: 'GET',
+        data:  getParams,
         dataType: 'json',
         success: function(data) {
             if (data.hasOwnProperty(rootJSON)) {

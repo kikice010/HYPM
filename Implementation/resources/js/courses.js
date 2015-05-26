@@ -21,7 +21,7 @@ $(document).ready(function() {
     function createListItem(course) {
         var tempListItem = listItem.clone();
         tempListItem.find('a').html(course)
-                    .attr('href', './courses/' + course.replace(/ /g, ''));
+                    .attr('href', './course.html?title=' + course);
         return tempListItem;
     }
 
