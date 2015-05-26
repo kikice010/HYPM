@@ -124,14 +124,14 @@ $( function(){
 	// load data for one filter 
 	// aslo bind one time click hendlers to lazily load data 
 	var params = (window.location.search.replace("?", "")).split("=");
-	if (params[1] == 'Level'){
+	if (params[1] && params[1] == 'Level'){
 		levelData.loadData();
 		Util.currentFilter = categoryData;
 		Util.showDataByFilter(levelData);
 		categoryData.$tab.one('click', function(){categoryData.loadData();});
 		alphabeticalData.$tab.one('click', function(){alphabeticalData.loadData();});
 	}
-	if (params[1] == 'Alphabetical'){
+	if (params[1] && params[1] == 'Alphabetical'){
 		alphabeticalData.loadData();
 		Util.currentFilter = categoryData;
 		Util.showDataByFilter(alphabeticalData);
