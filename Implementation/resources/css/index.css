@@ -2,7 +2,7 @@
     height: 	470px;
     text-align: right;
     background-size: cover;
-    background: #ddd url('../images/index-header2.jpg') center center;
+    background: #ddd url('http://hypermediagym.altervista.org/resources/images/index-header2.jpg') center center;
 }
 
 .jumbotron .container {
