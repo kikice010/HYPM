@@ -1,16 +1,4 @@
 $(document).ready(function() {
-    $('#enroll-form').submit(function (evt) {
-        evt.preventDefault();
-         $('#enroll-message')
-         .html($('#enroll-name').val() +', thank you for signing up!')
-         .fadeIn('slow');
-         $('#enroll-form')[0].reset();
-    });
-    $('#enroll-accordion a').click(function(evt) {
-        $('#enroll-message').html('');
-    });
-
-
 
     var listItem = $('<li><a href=""></a></li>');
 
@@ -60,4 +48,16 @@ $(document).ready(function() {
             {'title': params[1].replace(/%20/g, ' ') });
     }
 
+
+    // enrollment form listeners
+    $('#enroll-form').submit(function (evt) {
+        evt.preventDefault();
+         $('#enroll-message')
+         .html($('#enroll-name').val() +', thank you for signing up!')
+         .fadeIn('slow');
+         $('#enroll-form')[0].reset();
+    });
+    $('#enroll-accordion a').click(function(evt) {
+        $('#enroll-message').html('');
+    });
 });

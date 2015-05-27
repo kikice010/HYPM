@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="../resources/css/external/bootstrap.min.css" rel="stylesheet">
     <link href="../resources/css/main.css" rel="stylesheet">
+    <link href="../resources/css/instructor.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -59,25 +60,39 @@
             </div>
             <div id="instructor-container">
                 <!-- load from database -->
-				<div class="instructor-image">
-                    <img class="instructor-image-id"/>
+                <div class="row">
+                    <div class="instructor-image col-md-3 col-sm-3 col-xs-4  ">
+                        <img class="instructor-image-id" />
+                    </div>
+                    <div class="col-md-3  col-sm-3  col-xs-9">
+                        <div class="instructor-of-the-month"></div>
+                        <table>
+                            <tr class="instructor-courses">
+                                <td>Courses: </td>
+                                <td>
+                                    <ul class="list-unstyled"></ul>
+                                </td>
+                            </tr>
+                            <tr class="instructor-categories">
+                                <td>Categories: </td>
+                                <td>
+                                    <ul class="list-unstyled"></ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-				<div class="instructor-of-the-month">
+
+                <div class="instructor-bio">
+                <h4>Bio</h4>
+                <div class="instructor-bio-text"></div>
                 </div>
-                 <div class="instructor-courses">Courses:
-                    <ul></ul>
-                </div>
-                 <div class="instructor-categories">Categories:
-                    <ul></ul>
-                </div>
-				<div class="instructor-bio">
-                </div>
-				<div class="instructor-qualifications">
-				    <h2>Qualifications</h2>
+                <div class="instructor-qualifications">
+                    <h4>Qualifications</h4>
                     <div class="instructor-qualifications-text"></div>
                 </div>
-				<div class="instructor-prizes">
-				    <h2>Prizes and awards</h2>
+                <div class="instructor-prizes">
+                    <h4>Prizes and awards</h4>
                     <div class="instructor-prizes-text"></div>
                 </div>
             </div>

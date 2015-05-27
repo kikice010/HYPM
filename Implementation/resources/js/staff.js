@@ -10,7 +10,7 @@ $(document).ready(function() {
             tempNode.find('.instructor-name').html("<a href='./instructor.html?name="+instructor.instr_name+"'>"+instructor.instr_name+"</a>");
             tempNode.find('img').attr('src', instructor.image_path);
 			if(instructor.instructor_of_the_month == 1) {
-				tempNode.find('.instructor-of_the_month').html("<img src='../resources/images/instructors/star.png'  height='42' width='42' /> <b> Instructor of the month</b>");
+				tempNode.find('.instructor-of_the_month').html('<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <b> Instructor of the month</b>');
 			} else {
 				tempNode.find('.instructor-of_the_month').css("visibility", 'hidden');
 			}

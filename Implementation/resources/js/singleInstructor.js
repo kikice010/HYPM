@@ -4,12 +4,12 @@ $(document).ready(function() {
 
     function createInstructorContainer(instructor) { // clone the empty boilerplate node and fill it with content
         var rootElement = $('#instructor-container');
-        $('.page-header h1').html(instructor.instr_name);
-        $('.breadcrumb li:last').html(instructor.instr_name);
+        $('.page-header h1').html(instructor.instr_name).fadeIn();
+        $('.breadcrumb li:last').html(instructor.instr_name).fadeTo(500,1);
 		
 		rootElement.find('.instructor-image-id').attr('src', instructor.image_path);
 		if(instructor.instructor_of_the_month == 1) {
-			rootElement.find('.instructor-of-the-month').html("<img src='../resources/images/instructors/star.png'  height='42' width='42' /> <b> Instructor of the month</b>");
+			rootElement.find('.instructor-of-the-month').html('<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <b> Instructor of the month</b>');
 		} else {
 			rootElement.find('.instructor-of-the-month').css("visibility", 'hidden');
 		}
@@ -28,11 +28,11 @@ $(document).ready(function() {
             }
         }
 		
-		rootElement.find('.instructor-bio').html(instructor.bio);
+		rootElement.find('.instructor-bio-text').html(instructor.bio);
 		rootElement.find('.instructor-qualifications-text').html(instructor.prizes_and_awards);
 		rootElement.find('.instructor-prizes-text').html(instructor.prizes_and_awards);
 
-        return rootElement;
+        return rootElement.fadeIn();
     }
 
 
