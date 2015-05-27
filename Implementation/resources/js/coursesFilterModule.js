@@ -131,7 +131,7 @@ $( function(){
 		categoryData.$tab.one('click', function(){categoryData.loadData();});
 		alphabeticalData.$tab.one('click', function(){alphabeticalData.loadData();});
 	}
-	if (params[1] && params[1] == 'Alphabetical'){
+	else if (params[1] && params[1] == 'Alphabetical'){
 		alphabeticalData.loadData();
 		Util.currentFilter = categoryData;
 		Util.showDataByFilter(alphabeticalData);
