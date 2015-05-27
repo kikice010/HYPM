@@ -1,5 +1,4 @@
 <?php
-
 /*
 Following code gets all the details regarding single category provided it's name
 eg. return JSON format;
@@ -13,21 +12,21 @@ eg. return JSON format;
         }
     }]
 }
-
  */
 header("Access-Control-Allow-Origin: *");
 
 // array for JSON response
 $response = array();
-if (isset($_GET["name"])) {
 
+// get params from get request eg (./site.html?name=Cardio)
+if (isset($_GET["name"])) {
 	$name = $_GET["name"];
 
-	// include db connect class
+	// connect to db
 	$con = mysqli_connect("localhost", "hypermediagym", "bipgikorgu20", "my_hypermediagym");
 	mysqli_query($con, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
-	// get all Category from Category table
+	// get the category with name = $name 
 	$result = mysqli_query($con,
 		"SELECT * " .
 		"FROM category " .
