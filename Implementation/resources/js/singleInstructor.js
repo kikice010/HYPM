@@ -22,9 +22,9 @@ $(document).ready(function() {
         }
 		
 		if (instructor.hasOwnProperty('categories')) {
-            for (var i in instructor.categories) {
+            for (var j in instructor.categories) {
                 rootElement.find('.instructor-categories ul')
-                    .append(createCategoryListItem(instructor.categories[i]));
+                    .append(createCategoryListItem(instructor.categories[j]));
             }
         }
 		

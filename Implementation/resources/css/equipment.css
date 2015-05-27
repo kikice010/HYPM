@@ -1,11 +1,10 @@
 
 .single-equipment-item{
-	padding: 4% 0;
+	padding      : 4% 0;
 	border-bottom: 1px solid #ddd;
-
 }
 .equipment-image img {
-	width: 100%;
+	width    : 100%;
 	max-width: 160px;
 }
 

@@ -1,11 +1,11 @@
 
 .single-instructor-item{
-	padding: 4% 0;
+	padding      : 4% 0;
 	border-bottom: 1px solid #ddd;
 
 }
 .instructor-image img {
-	width: 100%;
+	width    : 100%;
 	max-width: 160px;
 }
 

@@ -1,12 +1,12 @@
 .left-column {
-	float: left;
-    width:50%;
-    height:100%;
+	float : left;
+	width : 50%;
+	height: 100%;
 	background-color: #CCF;
 }
 .right-column {
-	float: right;
-    width:49%;
-    height:100%;
+	float : right;
+	width : 49%;
+	height: 100%;
 	background-color: #FCA;
 }
