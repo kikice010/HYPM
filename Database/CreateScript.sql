@@ -1,3 +1,12 @@
+CREATE TABLE `homepage` (
+  `homepage_id` int NOT NULL AUTO_INCREMENT,
+  `header_image_path` text NOT NULL,
+  `general_description` text NOT NULL,
+  `founder_video_path` text NOT NULL,
+  `founder_description` text NOT NULL,
+  PRIMARY KEY (`homepage_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
 CREATE TABLE `category` (
   `category_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
@@ -7,7 +16,7 @@ CREATE TABLE `category` (
   `meant_for`  text NOT NULL,
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `room` (
   `room_id` int NOT NULL AUTO_INCREMENT,
@@ -15,7 +24,7 @@ CREATE TABLE `room` (
   `location` text NOT NULL,
   PRIMARY KEY (`room_id`),
   UNIQUE KEY `room_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `course` (
   `course_id` int NOT NULL AUTO_INCREMENT,
@@ -26,11 +35,12 @@ CREATE TABLE `course` (
   `level`  varchar(40) NOT NULL,
   `course_category_id`  int NOT NULL,
   `course_room_id`  int NOT NULL,
+  `schedule` text NOT NULL,
   PRIMARY KEY (`course_id`),
   UNIQUE KEY `course_title` (`title`),
   CONSTRAINT `course_category_id` FOREIGN KEY (`course_category_id`) REFERENCES `category` (`category_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `course_room_id` FOREIGN KEY (`course_room_id`) REFERENCES `room` (`room_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `room_gallery` (
   `room_gallery_id` int NOT NULL AUTO_INCREMENT,
@@ -77,13 +87,6 @@ CREATE TABLE `equipment` (
   PRIMARY KEY (`equipment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE `testimonial` (
-  `testimonial_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(40) ,
-   `description` text NOT NULL,
-   `link` text NOT NULL,
-  PRIMARY KEY (`testimonial_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `location` (
   `location_id` int NOT NULL AUTO_INCREMENT,
@@ -92,21 +95,4 @@ CREATE TABLE `location` (
    `lat` float NOT NULL,
    `long` float NOT NULL,
   PRIMARY KEY (`location_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
-CREATE TABLE `membership` (
-  `membership_id` int NOT NULL AUTO_INCREMENT,
-  `option` text NOT NULL,
-  PRIMARY KEY (`membership_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
-CREATE TABLE `schedule` (
-  `schedule_id` int NOT NULL AUTO_INCREMENT,
-  `day` varchar(30) NOT NULL,
-  `start_time` datetime NOT NULL,
-  `end_time` datetime NOT NULL, 
-  `repeat` varchar(60) NOT NULL,
-  `schedule_course_id` int NOT NULL,
-  PRIMARY KEY (`schedule_id`),
-  CONSTRAINT `schedule_course_id` FOREIGN KEY (`schedule_course_id`) REFERENCES `course` (`course_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
