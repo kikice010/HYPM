@@ -4,7 +4,11 @@ $(document).ready(function() {
          $('#enroll-message')
          .html($('#enroll-name').val() +', thank you for signing up!')
          .fadeIn('slow');
-});
+         $('#enroll-form')[0].reset();
+    });
+    $('#enroll-accordion a').click(function(evt) {
+        $('#enroll-message').html('');
+    });
 
 
 
