@@ -1,0 +1,23 @@
+td {
+    padding: 5px 10px 5px 0px;
+    vertical-align: 	  top;
+}
+td:first-child {
+    font-weight: 700;
+}
+.page-header h1,
+#category-container {
+	display: none;
+}
+.breadcrumb li:last-child {
+    opacity: 0;
+}
+.category-origins,
+.category-description,
+.category-benefits,
+.category-meant-for{
+	text-align  : justify;
+}
+#category-container .row {
+    padding-left: 15px;
+}
