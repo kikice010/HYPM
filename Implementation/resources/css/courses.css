@@ -1,5 +1,8 @@
-.course-tab-wrap {
-    margin-bottom: 3% ;
+.course-tab-desktop-wrap{
+    display: none;
+}
+.course-tab-mobile-wrap {
+    margin-bottom: 6% ;
 }
 .single-category-container div, .single-level-container div{
     margin-bottom: 2%;
@@ -22,7 +25,16 @@
     font-size: 1.2em;
     text-decoration: none;
 }
-/* Small Devices, Tablets */
+
+@media only screen and (min-width: 360px) {
+    .course-tab-mobile-wrap {
+        display: none;
+    }
+    .course-tab-desktop-wrap {
+        display: block;
+        margin-bottom: 3% ;
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .single-category-container {

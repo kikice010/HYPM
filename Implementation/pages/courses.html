@@ -54,13 +54,23 @@
             <div class="page-header" style="border-bottom:none">
                 <h1>Our courses</h1>
             </div>
-            <div class="course-tab-wrap">
+            <!-- Begin tab navigation for desktop -->
+            <div class="course-tab-desktop-wrap">
                 <ul class="nav nav-tabs">
-                    <li role="presentation" id="category-tab"><a href="#">Categories</a></li>
-                    <li role="presentation" id="level-tab"><a href="#">Level</a></li>
-                    <li role="presentation" id="alphabetical-tab"><a href="#">Alphabetical Order</a></li>
+                    <li role="presentation" class="category-tab"><a href="?orderBy=Category">Category</a></li>
+                    <li role="presentation" class="level-tab"><a href="#?orderBy=Level">Level</a></li>
+                    <li role="presentation" class="alphabetical-tab"><a href="?orderBy=Alphabetical">Alphabetical Order</a></li>
                 </ul>
             </div>
+            <!-- End tab navigation for desktop -->
+
+            <!-- Begin tab navigation for mobile -->
+            <div class="course-tab-mobile-wrap btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="category-tab btn btn-default">Category</button>
+              <button type="button" class="level-tab btn btn-default">Level</button>
+              <button type="button" class="alphabetical-tab btn btn-default">Alphabetical</button>
+            </div>
+            <!-- End tab navigation for mobile -->
 
             <!-- Begin category container -->
             <div id="category-filter-container" class="row" style="display:none;">

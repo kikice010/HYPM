@@ -88,7 +88,7 @@ $( function(){
 	};	
 
 	var categoryData 	= {
-		$tab			: 	$('#category-tab')							|| null,
+		$tab			: 	$('.category-tab')							|| null,
 		$root 			: 	$('#category-filter-container')   			|| null,
 		$itemElement 	: 	$('.single-category-container').clone()   	|| null,
 		loadData : function(){
@@ -99,7 +99,7 @@ $( function(){
 	};
 
 	var levelData = {
-		$tab			: 	$('#level-tab')							|| null,
+		$tab			: 	$('.level-tab')							|| null,
 		$root 			: 	$('#level-filter-container')  			|| null,
 		$itemElement 	: 	$('.single-level-container').clone() 	|| null,
 		loadData : function(){
@@ -110,7 +110,7 @@ $( function(){
 	};
 
 	var alphabeticalData = {
-		$tab			: 	$('#alphabetical-tab')							|| null,
+		$tab			: 	$('.alphabetical-tab')							|| null,
 		$root 			: 	$('#alphabetical-filter-container')   			|| null,
 		$itemElement 	: 	$('.single-alphabetical-container').clone()   	|| null,
 		loadData : function(){
