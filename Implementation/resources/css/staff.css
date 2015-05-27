@@ -1,11 +1,24 @@
 
 .single-instructor-item{
 	padding      : 4% 0;
-	border-bottom: 1px solid #ddd;
-
 }
 .instructor-image img {
+	opacity  : 0.8;
 	width    : 100%;
 	max-width: 160px;
+	background-color  : rgb(68,68,68); /* Needed for IEs */
+	-moz-box-shadow   : 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow        : 5px 5px 5px rgba(68,68,68,0.6);
+}
+.instructor-image img:hover {
+	opacity: 1;
 }
 
+@media (max-width: 315px) {
+
+	.single-instructor-item{
+		margin: 0 20%;
+		width: 60%;
+	}
+}
