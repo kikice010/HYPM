@@ -1,6 +1,7 @@
 
 .single-equipment-item{
-	padding      : 4% 0;
+	padding: 4% 0;
+	display: none;
 	border-bottom: 1px solid #ddd;
 }
 .equipment-image img {
