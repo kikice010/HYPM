@@ -1,0 +1,49 @@
+td {
+    padding: 5px 10px 5px 0px;
+    vertical-align: 	  top;
+}
+td:first-child {
+    font-weight: 700;
+}
+.page-header h1,
+#course-container {
+	display: none;
+}
+.breadcrumb li:last-child {
+    opacity: 0;
+}
+.course-target-text,
+.course-description-text{
+	text-align  : justify;
+}
+#course-container .row {
+    padding-left: 15px;
+}
+#enroll-accordion {
+    padding-left: 0;
+}
+#enroll-message{
+	color      : #D5B65D;
+	display    : none;
+	margin-left: 1%;
+}
+#enroll-additional-info{
+	resize: vertical;
+}
+
+@media (min-width: 768px) {
+    #enroll-accordion {
+		float    : right;
+		min-width: 420px;
+    }
+    #enroll-name,
+    #enroll-email {
+        margin-right: 10px;
+    }
+    #enroll-email {
+        margin-top: 20px;
+    }
+    #enrollForm button {
+        margin-top: 10px;
+    }
+}

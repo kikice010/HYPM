@@ -1,12 +1,20 @@
 $(document).ready(function() {
+    $('#enroll-form').submit(function (evt) {
+        evt.preventDefault();
+         $('#enroll-message')
+         .html($('#enroll-name').val() +', thank you for signing up!')
+         .fadeIn('slow');
+});
+
+
 
     var listItem = $('<li><a href=""></a></li>');
 
     function createCourseContainer(course) { // clone the empty boilerplate node and fill it with content
         var rootElement = $('#course-container');
-        $('.page-header h1').html(course.title);
-        $('.breadcrumb li:last').html(course.title);
-        
+        $('.course-name').html(course.title).fadeIn();
+        $('.breadcrumb li:last').html(course.title).fadeTo(500,1);
+
         rootElement.find('.course-room a')
             .html(course.room)
             .attr('href', './room.html?name=' + course.room);
@@ -16,7 +24,7 @@ $(document).ready(function() {
         rootElement.find('.course-category a')
             .html(course.category)
             .attr('href', './category.html?name=' + course.category);
-            
+
         rootElement.find('.course-target-text').html(course.target);
         rootElement.find('.course-schedule-text').html(course.schedule);
         rootElement.find('.course-description-text').html(course.description);
@@ -27,7 +35,7 @@ $(document).ready(function() {
                     .append(createListItem(course.instructors[i]));
             }
         }
-        return rootElement;
+        return rootElement.fadeIn();
     }
 
 
