@@ -1,4 +1,7 @@
-
+.instructor-of_the_month,
+.single-instructor-item{
+	display: none;
+}
 .single-instructor-item{
 	padding      : 4% 0;
 }
@@ -15,7 +18,7 @@
 	opacity: 1;
 }
 
-@media (max-width: 315px) {
+@media (max-width: 350px) {
 
 	.single-instructor-item{
 		margin: 0 20%;

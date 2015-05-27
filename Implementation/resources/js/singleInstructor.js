@@ -9,10 +9,10 @@ $(document).ready(function() {
 		
 		rootElement.find('.instructor-image-id').attr('src', instructor.image_path);
 		if(instructor.instructor_of_the_month == 1) {
-			rootElement.find('.instructor-of-the-month').html('<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <b> Instructor of the month</b>');
-		} else {
-			rootElement.find('.instructor-of-the-month').css("visibility", 'hidden');
-		}
+			rootElement.find('.instructor-of-the-month')
+                        .html('<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <b> Instructor of the month</b>');
+
+		} 
 		
 		if (instructor.hasOwnProperty('courses')) {
             for (var i in instructor.courses) {
