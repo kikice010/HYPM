@@ -1,5 +1,4 @@
 <?php
-
 /*
  Following code lists all categories and their corresonding courses
  eg. return JSON format;
@@ -13,26 +12,24 @@
         }
     ]}
 */
-
 header("Access-Control-Allow-Origin: *");
-
-//default response
-$response["success"] = 0;
-$response["message"] = "Courses not found!";
 
 // array for JSON response
 $response = array();
 $response["level"] = array();
 
+//default response
+$response["success"] = 0;
+$response["message"] = "Courses not found!";
+
 // list all possible levels
 $levels = array("Beginner", "Intermediate", "Advanced");
 
-// include db connect class
+// connect to db
 $con = mysqli_connect("localhost","hypermediagym","bipgikorgu20","my_hypermediagym");
 mysqli_query( $con,"SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
-// get all equipment from equipment table
-
+// for each level in $levels array get the corresponding courses
 foreach ($levels as $level) {
 
     $result = mysqli_query($con,
@@ -40,7 +37,8 @@ foreach ($levels as $level) {
         "FROM course ".
         "WHERE level = '". $level ."'")or die(mysql_error());
 
-    if (mysqli_num_rows($result) > 0){ // check for empty result
+    // skip if no result for a paticular level
+    if (mysqli_num_rows($result) > 0){ 
             $response["success"] = 1;
             $response["message"] = "Courses found!";
             
