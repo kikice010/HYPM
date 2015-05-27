@@ -6,7 +6,7 @@ $(document).ready(function() {
         var rootElement = $('#course-container');
         $('.page-header h1').html(course.title);
         $('.breadcrumb li:last').html(course.title);
-
+        
         rootElement.find('.course-room a')
             .html(course.room)
             .attr('href', './room.html?name=' + course.room);
@@ -16,9 +16,10 @@ $(document).ready(function() {
         rootElement.find('.course-category a')
             .html(course.category)
             .attr('href', './category.html?name=' + course.category);
-        rootElement.find('.course-description-text').html(course.description);
+            
         rootElement.find('.course-target-text').html(course.target);
-
+        rootElement.find('.course-schedule-text').html(course.schedule);
+        rootElement.find('.course-description-text').html(course.description);
 
         if (course.hasOwnProperty('instructors')) {
             for (var i in course.instructors) {

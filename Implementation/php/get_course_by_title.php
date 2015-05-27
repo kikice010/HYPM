@@ -4,25 +4,25 @@
 Following code gets all the details regarding one course provided it's title
 eg. return JSON format;
 {   course: [
-	{
-		room: "A1"
-		title: "Spinning",
-		level: "Beginner",
-		target: "Any",
-		category: "Cardio",
-		description: "Indoor cycling, as an organized...",
-		instructors: ['Jane Doe', 'John Doe']
-	}]
+{
+room: "A1"
+title: "Spinning",
+level: "Beginner",
+target: "Any",
+category: "Cardio",
+description: "Indoor cycling, as an organized...",
+instructors: ['Jane Doe', 'John Doe']
+}]
 }
  */
 header("Access-Control-Allow-Origin: *");
 // array for JSON response
-$response = array(); 
+$response = array();
 
 // get params from get request eg (./site.html?title=Spinning)
 if (isset($_GET["title"])) {
-	$title 				 = $_GET["title"];
-	$response["course"]  = array();
+	$title              = $_GET["title"];
+	$response["course"] = array();
 
 	// connect to db
 	$con = mysqli_connect("localhost", "hypermediagym", "bipgikorgu20", "my_hypermediagym"); // connect to db
@@ -51,6 +51,7 @@ if (isset($_GET["title"])) {
 			$entry["title"]       = $row["title"];
 			$entry["level"]       = $row["level"];
 			$entry["target"]      = $row["target"];
+			$entry["schedule"]    = $row["schedule"];
 			$entry["category"]    = $row["category"];
 			$entry["description"] = $row["description"];
 			$entry["instructors"] = array();
