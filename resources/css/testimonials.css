@@ -13,3 +13,16 @@
       max-width: 75%;
       height: auto;
 }
+.page-header-smaller{
+    font-size: 1.2em;
+    font-weight: 700;
+	margin:1% 15% 1% 15%;
+	border-bottom: 1px solid #ddd;
+}
+
+@media only screen and (min-width: 768px) {
+    .page-header-smaller{
+        font-size: 2em;
+    	font-weight: 400;
+    }
+}
