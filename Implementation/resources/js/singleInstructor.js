@@ -14,10 +14,6 @@ $(document).ready(function() {
 			rootElement.find('.instructor-of-the-month').css("visibility", 'hidden');
 		}
 		
-		console.log(instructor);
-		//in the logged variable there is nothing inside arrays instructor.courses and instructor.categories
-		//but if we check the php call it is ok
-		//http://hypermediagym.altervista.org/php/get_instructor_by_name.php?name=Alexandra+Behrens
 		if (instructor.hasOwnProperty('courses')) {
             for (var i in instructor.courses) {
                 rootElement.find('.instructor-courses ul')
