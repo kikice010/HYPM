@@ -67,8 +67,8 @@ if (isset($_GET["name"])) {
 				$response["message"] = "Courses found!";
 
 				// for each course that of the given category, push the result in te entry array
-				while ($instructor_row = mysqli_fetch_array($course_result)) {
-					array_push($entry["courses"], $instructor_row["title"]);
+				while ($course_row = mysqli_fetch_array($course_result)) {
+					array_push($entry["courses"], $course_row["title"]);
 				}
 			}
 
