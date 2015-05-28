@@ -1,3 +1,37 @@
+
+td {
+    padding: 5px 10px 5px 0px;
+    vertical-align: 	  top;
+}
+td:first-child {
+    font-weight: 700;
+}
+.page-header h1,
+#course-container {
+	display: none;
+}
+.breadcrumb li:last-child {
+    opacity: 0;
+}
+
+.room-gallery{
+	margin-top: 15px;
+}
+.room-gallery p{
+    font-weight: 700;
+}
+.room-gallery  div{
+	display: inline-block;
+	margin: 10px 10px;
+	max-height: 150px;
+	max-width: 190px;
+	overflow: hidden;
+	background-color  : rgb(68,68,68); /* Needed for IEs */
+	-moz-box-shadow   : 5px 5px 5px rgba(68,68,68,0.6);
+	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+	box-shadow        : 5px 5px 5px rgba(68,68,68,0.6);
+}
 .room-gallery img{
-	max-width: 200px;
+	max-height: 150px;
+	
 }
