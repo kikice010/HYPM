@@ -56,11 +56,78 @@
                 <h1>Location</h1>
             </div>
 			<!-- Two columns divider -->
-			<div id="location-content-container">
-				<div class="left-column"></div>
-				<div class="right-column"></div>
+			<div id="location-container" class="row">
+				<!-- First column -->
+				<div id="location-map-container" class="col-md-6 col-sm-6 col-xs-6">
+					<div class="iframe-wrapper">
+						<iframe></iframe>
+					</div>
+				</div>
+				<!-- Second column -->
+				<div id="location-content-container" class="col-md-6 col-sm-6 col-xs-6">
+					<!-- load from database -->
+					<div class="location-content-item" >
+						<div class="contact-info">
+							<h3>Contact</h3>
+							<p>+39 339 339</p>
+							<div class="contact-info-address"></div>
+						</div>
+						<div class="work-info">
+							<h3>Working hours</h3>
+							<table>
+								<tr>
+									<td>Mon-Sat: </td>
+									<td>08:00-23:00</td>
+								</tr>
+								<tr>
+									<td>Sun: </td>
+									<td>08:00-13:00</td>
+								</tr>
+							</table>
+						</div>
+						<div class="how-to-get-here">
+							<h3>How to get here?</h3>
+							<div class="how-to-get-here-text"></div>
+						</div>
+						<div class="have-a-question">
+							<h3>Have a question?</h3>
+							<!-- Begin Form -->
+							<div class="panel-group row" id="contactUs-accordion" role="tablist" aria-multiselectable="true" >
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" style="background-color:#fff">
+										<h4 class="panel-title">
+											<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#contactUsForm" aria-expanded="false" aria-controls="contactUsForm">
+											  Contact us
+											</a>
+										  </h4>
+									</div>
+									<div id="contactUsForm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+										<div class="panel-body">
+											<form id="contactUs-form" class="form-inline" role="form">
+												<div class="form-group">
+													<input class="form-control" style="width: 100%" id="contactUs-name" placeholder="Name" autocomplete="off" required> <br/>
+													<input type="email" class="form-control" style="width: 100%"  id="contactUs-email" autocomplete="off" required placeholder="Enter email"> <br/>
+													<textarea style="width: 100%"   rows="4" type="text" class="form-control" id="contactUs-additional-info" autocomplete="off" placeholder="Any additional info"></textarea>
+												</div><br/>
+												<div>
+												<button  type="submit" class="btn btn-default">Submit</button> 
+												<span id="contactUs-message"> </span>
+												</div>
+
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End Form -->
+						</div>	
+					</div>
+				</div>
+				<!-- End second column -->
 			<div>
         </div>
+    </div>
+    </div>
     </div>
     <!-- End page wrap -->
     <!-- Begin footer -->
@@ -72,6 +139,9 @@
     <!-- End footer -->
     
     <script src="../resources/js/external/bootstrap.min.js"></script>
+    <script src="../resources/js/loadContentFunction.js"></script>
+    <script src="../resources/js/location.js"></script>
+	<script src="http://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
 </body>
 
 </html>

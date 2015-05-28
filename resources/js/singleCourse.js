@@ -4,8 +4,8 @@ $(document).ready(function() {
 
     function createCourseContainer(course) { // clone the empty boilerplate node and fill it with content
         var rootElement = $('#course-container');
-        $('.page-header h1').html(course.title);
-        $('.breadcrumb li:last').html(course.title);
+        $('.course-name').html(course.title).fadeIn();
+        $('.breadcrumb li:last').html(course.title).fadeTo(500,1);
 
         rootElement.find('.course-room a')
             .html(course.room)
@@ -16,9 +16,10 @@ $(document).ready(function() {
         rootElement.find('.course-category a')
             .html(course.category)
             .attr('href', './category.html?name=' + course.category);
-        rootElement.find('.course-description-text').html(course.description);
-        rootElement.find('.course-target-text').html(course.target);
 
+        rootElement.find('.course-target-text').html(course.target);
+        rootElement.find('.course-schedule-text').html(course.schedule);
+        rootElement.find('.course-description-text').html(course.description);
 
         if (course.hasOwnProperty('instructors')) {
             for (var i in course.instructors) {
@@ -26,7 +27,7 @@ $(document).ready(function() {
                     .append(createListItem(course.instructors[i]));
             }
         }
-        return rootElement;
+        return rootElement.fadeIn();
     }
 
 
@@ -47,4 +48,16 @@ $(document).ready(function() {
             {'title': params[1].replace(/%20/g, ' ') });
     }
 
+
+    // enrollment form listeners
+    $('#enroll-form').submit(function (evt) {
+        evt.preventDefault();
+         $('#enroll-message')
+         .html($('#enroll-name').val() +', thank you for signing up!')
+         .fadeIn('slow');
+         $('#enroll-form')[0].reset();
+    });
+    $('#enroll-accordion a').click(function(evt) {
+        $('#enroll-message').html('');
+    });
 });

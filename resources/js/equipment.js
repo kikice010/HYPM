@@ -10,7 +10,7 @@ $(document).ready(function() {
             tempNode.find('.equipment-name').html(equipment.name);
             tempNode.find('.equipment-description').html(equipment.description);
             tempNode.find('img').attr('src', equipment.image_path);
-        return tempNode;
+        return tempNode.fadeIn('slow');
     }
 
     // load content from the server

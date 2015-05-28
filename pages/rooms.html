@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Big Gym - Schedule</title>
+    <title>Big Gym - Rooms</title>
     <!-- Bootstrap -->
     <link href="../resources/css/external/bootstrap.min.css" rel="stylesheet">
     <link href="../resources/css/main.css" rel="stylesheet">
+    <link href="../resources/css/rooms.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,7 +37,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="./courses.html">Courses</a></li>
                     <li><a href="./staff.html">Staff</a></li>
-                    <li class="active"><a href="./schedule.html">Schedule</a></li>
+                    <li><a href="./schedule.html">Schedule</a></li>
                     <li><a href="./equipment.html">Equipment</a></li>
                     <li><a href="./testimonials.html">Testimonials</a></li>
                     <li><a href="./membership.html">Fees and registration</a></li>
@@ -47,24 +48,28 @@
         </div>
     </nav>
     <!-- End navbar -->
-
     <!-- Begin page wrap -->
     <div class="page-wrap">
         <div class="container">
             <div class="page-header">
-                <h1>Schedule</h1>
+                <h1>Rooms</h1>
             </div>
 
-			<!-- Begin AUI js scheduler -->
-			<div id="wrapper">
-				<div id="myScheduler">
-				</div>
-			</div>
-			<!-- End AUI js scheduler -->
+
+            <!-- Begin rooms container -->
+             <div id="rooms-container" class="row" >
+                <div class="single-floor-container col-md-3 col-sm-5 col-xs-12" style="display:none;" >
+                    <div>
+                        <div class="floor-name"></div>
+                        <ul  class="rooms list-group"></ul>
+                    </div>
+                </div>
+             </div>
+            <!-- End rooms container -->
+            </div>
         </div>
     </div>
     <!-- End page wrap -->
-
     <!-- Begin footer -->
     <footer class="footer">
         <div class="container">
@@ -72,10 +77,7 @@
         </div>
     </footer>
     <!-- End footer -->
-    
     <script src="../resources/js/external/bootstrap.min.js"></script>
-    <script src="../resources/js/external/aui-min.js"></script>
-	<script src="../resources/js/schedule.js"></script>
-</body>
-
-</html>
+    <script src="../resources/js/loadContentFunction.js"></script>
+    <script src="../resources/js/rooms.js"></script>
+</body </html>
