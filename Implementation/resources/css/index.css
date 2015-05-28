@@ -2,7 +2,7 @@
     height         : 500px;
     text-align     : right;
     background-size: cover;
-    background     : #ddd url('http://hypermediagym.altervista.org/resources/images/index-header.jpg') center center;
+    background     : #ddd url('') center center;
 }
 
 .jumbotron .container {
@@ -21,4 +21,16 @@
 .jumbotron .container h1,
 .jumbotron .container h2 {
     font-weight: 700 !important;
+}
+.general-info,
+.founder-container{
+    text-align: justify;
+}
+
+.founder-video-container{
+    height: 250px;
+    margin-bottom: 15px;
+}
+.founder-container {
+    margin-left: 5px;
 }

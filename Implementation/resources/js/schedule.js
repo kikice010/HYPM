@@ -9,7 +9,7 @@ $(document).ready(function() {
 			var dat = new Date(this.valueOf());
 			dat.setDate(dat.getDate() + days);
 			return dat;
-		}
+		};
 		
 		var eventsArray = Array();
 		//CustomEvent Object.
@@ -21,7 +21,7 @@ $(document).ready(function() {
 			//this.color = "#D96666";
 		}
 		var clone = (function(){ 
-		  return function (obj) { Clone.prototype=obj; return new Clone() };
+		  return function (obj) { Clone.prototype=obj; return new Clone() ;};
 		  function Clone(){}
 		}());
 		function addOneWeek(event) {
