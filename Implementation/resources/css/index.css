@@ -1,8 +1,8 @@
 .jumbotron {
-    height         : 470px;
+    height         : 500px;
     text-align     : right;
     background-size: cover;
-    background     : #ddd url('http://hypermediagym.altervista.org/resources/images/index-header2.jpg') center center;
+    background     : #ddd url('http://hypermediagym.altervista.org/resources/images/index-header.jpg') center center;
 }
 
 .jumbotron .container {
