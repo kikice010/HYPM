@@ -1,22 +1,20 @@
 <?php
 /*
-Following code gets all the details regarding single category provided it's name
+Following code gets all the details regarding a single room provided it's name
 eg. return JSON format;
-{   category: [
 {
-name: "Yoga",
-origins: "Many people credit Dr Kenneth H. ...",
-benefits: "Increases the efficiency of res ...",
-meant_for: "Anyone",
-description: "Cardio (also known as aerobic ... ",
-courses: [
-"Bikram Yoga",
-"Anti-Gravity Yoga"
-],
-instructors: [
-"Alexandra Behrens"
-]
-}]
+	room: [
+	{
+		name: "A1",
+		location: "First floor",
+		courses: [
+			"Spinning"
+		],
+		gallery: [
+			"http://hypermediagym.altervista.org/resources/images/rooms/a1_1.jpg",
+			"http://hypermediagym.altervista.org/resources/images/rooms/a1_2.jpg"
+		]
+	}]
 }
  */
 header("Access-Control-Allow-Origin: *");
