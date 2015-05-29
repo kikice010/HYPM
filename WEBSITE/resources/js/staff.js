@@ -8,6 +8,7 @@ $(document).ready(function() {
     function createInstructorElement(instructor) { // clone the empty boilerplate node and fill it with content
         var tempNode = eqNode.clone();
             tempNode.find('.instructor-name').html("<a href='./instructor.html?name="+instructor.instr_name+"'>"+instructor.instr_name+"</a>");
+			tempNode.find('.instructor-image a').attr('href','./instructor.html?name='+instructor.instr_name);
             tempNode.find('img').attr('src', instructor.image_path);
 			if(instructor.instructor_of_the_month == 1) {
 				tempNode.find('.instructor-of_the_month')
