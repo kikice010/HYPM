@@ -28,7 +28,7 @@
 }
 
 .founder-video-container{
-    width: 95%;
+    max-width: 95%;
     height: 250px;
     margin-bottom: 15px;
 }
@@ -37,5 +37,5 @@
 }
 
 .general-info-container img{
-    width: 100%;
+    max-width: 100%;
 }
