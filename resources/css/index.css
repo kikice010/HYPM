@@ -28,9 +28,14 @@
 }
 
 .founder-video-container{
+    max-width: 95%;
     height: 250px;
     margin-bottom: 15px;
 }
 .founder-container {
     margin-left: 5px;
+}
+
+.general-info-container img{
+    max-width: 100%;
 }
