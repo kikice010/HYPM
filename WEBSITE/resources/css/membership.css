@@ -1,4 +1,15 @@
-
 td:first-child {
     font-weight: 700;
+}
+input{
+	margin-bottom: 10px;
+}
+#register-message{
+	color      : #D5B65D;
+	display    : none;
+	margin-left: 1%;
+}
+.form-inline .form-group {
+	display: block;
+	width: 100%;
 }
