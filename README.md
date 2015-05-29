@@ -13,4 +13,4 @@ External libraries & tools used:
 + [AdobePhoneGap Build](https://build.phonegap.com/) 
 
 Resources:
-+ [Twitter API](http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662)
++ [Twitter API setup guidance](http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662)
