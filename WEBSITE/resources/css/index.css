@@ -42,6 +42,9 @@
 input{
 	margin-bottom: 10px;
 }
+#contactUs-accordion {
+    padding: 0 2%;
+}
 #contactUs-message{
 	color      : #D5B65D;
 	display    : none;

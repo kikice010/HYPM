@@ -33,6 +33,7 @@ if (isset($_GET["name"])) {
 			$entry["image_path"]              = $row["image_path"];
 			$entry["qualifications"]          = $row["qualifications"];
 			$entry["prizes_and_awards"]       = $row["prizes_and_awards"];
+			$entry["twitter_screen_name"]     = $row["twitter_screen_name"];
 			$entry["instructor_of_the_month"] = $row["instructor_of_the_month"];
 			$entry["courses"]                 = array();
 			$entry["categories"]              = array();
