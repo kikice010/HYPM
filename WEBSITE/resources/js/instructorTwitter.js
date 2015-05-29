@@ -5,7 +5,7 @@ function loadInstructorTweets(screen_name) {
         '<div class="tweet-time"></div>' +
         '<div class="tweet-text"></div>' +
         '</div></div></li>');
-    
+
         $.ajax({
             url: 'http://hypermediagym.altervista.org/php/get_instructor_twitter_feed.php?screen_name=AlexBehrensGym',
             method: 'GET',
@@ -26,7 +26,7 @@ function loadInstructorTweets(screen_name) {
             .attr('href', 'https://twitter.com/' + screen_name)
             .html('@' + screen_name);
         var $tempTweet = $tweet.clone();
-        $tempTweet.find('.tweet-time').html(tweet.created_at);
+        $tempTweet.find('.tweet-time').html(tweet.created_at.split("+")[0]);
         $tempTweet.find('.tweet-text').html(tweet.text);
         return $tempTweet;
 
