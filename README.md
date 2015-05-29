@@ -11,6 +11,7 @@ External libraries & tools used:
 + [Bootstrap-Image-Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)
  + Bootstrap Image Gallery is an extension to [blueimp Gallery](https://blueimp.github.io/Gallery/), a touch-enabled, responsive and customizable image & video gallery.
 + [AdobePhoneGap Build](https://build.phonegap.com/) 
++ [Twitter API PHP wrapper](https://github.com/J7mbo/twitter-api-php)
 
 Resources:
 + [Twitter API setup guidance](http://stackoverflow.com/questions/12916539/simplest-php-example-for-retrieving-user-timeline-with-twitter-api-version-1-1/15314662#15314662)
