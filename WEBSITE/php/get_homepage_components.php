@@ -29,6 +29,7 @@ if (mysqli_num_rows($result) > 0) {
 		$entry["founder_video_path"]  = $row["founder_video_path"];
 		$entry["general_description"] = $row["general_description"];
 		$entry["founder_description"] = $row["founder_description"];
+		$entry["general_description_image_path"] = $row["general_description_image_path"];
 
 		// push single entry into final response array
 		array_push($response["homepage"], $entry);
