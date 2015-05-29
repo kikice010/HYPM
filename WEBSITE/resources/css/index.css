@@ -39,3 +39,15 @@
 .general-info-img  img{
     max-width: 100%;
 }
+input{
+	margin-bottom: 10px;
+}
+#contactUs-message{
+	color      : #D5B65D;
+	display    : none;
+	margin-left: 1%;
+}
+.form-inline .form-group {
+	display: block;
+	width: 100%;
+}

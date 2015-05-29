@@ -17,5 +17,17 @@ $(document).ready(function() {
             'http://hypermediagym.altervista.org/php/get_homepage_components.php',
              'homepage', $('#homepage-container'), loadHomepageComponents);
     }
-
+	
+	// contactUs form listeners
+    $('#contactUs-form').submit(function (evt) {
+        evt.preventDefault();
+         $('#contactUs-message')
+         .html($('#contactUs-name').val() +', thank you for contacting us!')
+         .fadeIn('slow');
+         $('#contactUs-form')[0].reset();
+    });
+    $('#contactUs-accordion a').click(function(evt) {
+        $('#contactUs-message').html('');
+    });
+	
 });
