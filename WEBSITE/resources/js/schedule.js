@@ -45,11 +45,11 @@ $(document).ready(function() {
 			}
 		}
 		//creating an event
-		var event1 = new CustomEvent(new Date(2015, 5, 16, 0), new Date(2015, 5, 16, 1), "Bikram Yoga");			pushEveryWeek(event1);
-		var event2 = new CustomEvent(new Date(2015, 5, 17, 1), new Date(2015, 5, 17, 2), "Spinning");			pushEveryWeek(event2);
-		var event3 = new CustomEvent(new Date(2015, 5, 17, 2), new Date(2015, 5, 17, 3), "Cardiolates");			pushEveryWeek(event3);
-		var event4 = new CustomEvent(new Date(2015, 5, 18, 3), new Date(2015, 5, 18, 4), "Anti-Gravity Yoga");			pushEveryWeek(event4);
-		var event5 = new CustomEvent(new Date(2015, 5, 19, 0), new Date(2015, 5, 19, 23), "Running Club");			pushEveryWeek(event5);
+		var event1 = new CustomEvent(new Date(2015, 5, 16, 10), new Date(2015, 5, 16, 11), "Bikram Yoga");			pushEveryWeek(event1);
+		var event2 = new CustomEvent(new Date(2015, 5, 17, 11), new Date(2015, 5, 17, 12), "Spinning");			pushEveryWeek(event2);
+		var event3 = new CustomEvent(new Date(2015, 5, 17, 12), new Date(2015, 5, 17, 13), "Cardiolates");			pushEveryWeek(event3);
+		var event4 = new CustomEvent(new Date(2015, 5, 18, 13), new Date(2015, 5, 18, 14), "Anti-Gravity Yoga");			pushEveryWeek(event4);
+		var event5 = new CustomEvent(new Date(2015, 5, 19, 10), new Date(2015, 5, 19, 23), "Running Club");			pushEveryWeek(event5);
 		var event6 = new CustomEvent(new Date(2015, 5, 20, 14), new Date(2015, 5, 20, 15), "Stage Circuits");			pushEveryWeek(event6);
 		var event7 = new CustomEvent(new Date(2015, 5, 21, 15), new Date(2015, 5, 21, 20), "Timed Station Circuits");			pushEveryWeek(event7);
 		var event8 = new CustomEvent(new Date(2015, 5, 22, 13), new Date(2015, 5, 22, 14), "Zumba");			pushEveryWeek(event8);
