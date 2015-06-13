@@ -5,9 +5,12 @@ td {
 td:first-child {
     font-weight: 700;
 }
+.instructor-table{
+	margin-bottom: 6%;
+}
 
 .instructor-image {
-	margin-bottom: 3% ;
+	margin-bottom: 1% ;
 }
 .instructor-image img{
 	width    : 100%;
