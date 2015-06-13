@@ -74,11 +74,13 @@ if (isset($_GET["name"])) {
 
 			// for each category get all instructors that teach it
 			$instructors_result = mysqli_query($con,
-				"SELECT instr_name " .
+				"SELECT DISTINCT(instr_name) " .
 				"FROM instructor " .
-				"INNER JOIN category_instructor " .
-				"ON instructor_id = fk_cat_instructor_id " .
-				"WHERE fk_category_id = " . $row['category_id']) or die(mysql_error());
+				"INNER JOIN course_instructor " .
+				"ON instructor_id = fk_instructor_id " .
+				"INNER JOIN course " .
+				"ON course_id = fk_course_id " .
+				"WHERE course_category_id = " . $row['category_id']) or die(mysql_error());
 
 			// skip if no instructors found for a given course
 			if (mysqli_num_rows($instructors_result) > 0) {
