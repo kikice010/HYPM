@@ -82,8 +82,12 @@ $( function(){
 						    if(counter === (data[rootJSON]).length)  clearInterval( intervalId );
 						}, 10);
 		            }
+		        },
+		        error: function(requestObject, error, errorThrown) {
+		            $('.page-wrap .container').append(
+		                $('<p>Please check your internet connection</p>').addClass('error-msg'));
 		        }
-    		});
+		    });
 		}
 	};	
 
