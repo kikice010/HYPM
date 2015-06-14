@@ -40,10 +40,9 @@ td:first-child {
     #enroll-email {
         margin-right: 10px;
     }
-    #enroll-email {
-        margin-top: 20px;
-    }
-    #enrollForm button {
+    #enroll-email,
+    #enrollForm button,
+    #enroll-additional-info {
         margin-top: 10px;
     }
 }

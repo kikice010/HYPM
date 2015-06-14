@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 13, 2015 at 11:16 PM
+-- Generation Time: Jun 14, 2015 at 12:07 PM
 -- Server version: 5.1.71-community-log
 -- PHP Version: 5.3.10
 
@@ -257,6 +257,7 @@ CREATE TABLE IF NOT EXISTS `location` (
   `how_to_get_here` tinytext NOT NULL,
   `lat` double NOT NULL,
   `long` double NOT NULL,
+  `APIkey` varchar(255) NOT NULL,
   PRIMARY KEY (`location_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
@@ -264,8 +265,8 @@ CREATE TABLE IF NOT EXISTS `location` (
 -- Dumping data for table `location`
 --
 
-INSERT INTO `location` (`location_id`, `address`, `how_to_get_here`, `lat`, `long`) VALUES
-(1, 'Via Edoardo Bonardi 9, Milano, Italia', 'Big Gym is located near the station Piola, along the underground line 2. In the nearby are the tram stops of line numbers 33 and 23, the bus stop of line 92, and the railway station of Milano Lambrate. ', 45.4793510437012, 9.22828102111816);
+INSERT INTO `location` (`location_id`, `address`, `how_to_get_here`, `lat`, `long`, `APIkey`) VALUES
+(1, 'Via Edoardo Bonardi 9, Milano, Italia', 'Big Gym is located near the station Piola, along the underground line 2. In the nearby are the tram stops of line numbers 33 and 23, the bus stop of line 92, and the railway station of Milano Lambrate. ', 45.4793510437012, 9.22828102111816, 'AIzaSyDTmIzHD3uxEIKo0bcj0vyVbPCNDBCrpFU');
 
 -- --------------------------------------------------------
 
