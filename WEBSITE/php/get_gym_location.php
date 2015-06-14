@@ -26,10 +26,12 @@ if (mysqli_num_rows($result) > 0) {
 	while ($row = mysqli_fetch_array($result)) {
 		// temp entry array
 		$entry                    = array();
-		$entry["address"]         = $row["address"];
-		$entry["how_to_get_here"] = $row["how_to_get_here"];
 		$entry["lat"]             = $row["lat"];
 		$entry["lon"]             = $row["long"];
+		$entry["APIkey"]          = $row["APIkey"];
+		$entry["address"]         = $row["address"];
+		$entry["how_to_get_here"] = $row["how_to_get_here"];
+
 
 		// push single entry into final response array
 		array_push($response["location"], $entry);
